@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Website Summarizer{% endblock %}
+
+{% block content %}
+  <h1>Website Summarizer</h1>
+
+  <form action="{{ url_for('submit') }}" method="POST">
+    <h2>Enter URL</h2>
+    <input id="url" name="url" type="url" placeholder="https://example.com" required>
+    <button type="submit">Summarize</button>
+  </form>
+  <p>{{ message }}</p>
+
+{% endblock %}
